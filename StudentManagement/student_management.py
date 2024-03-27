@@ -13,6 +13,7 @@ class StudentManagement:
     def add_student(self, student):
         self.students.append(student)
 
+
     def search_student(self, name):
         found_students = []
         for student in self.students:
@@ -22,9 +23,11 @@ class StudentManagement:
 
     def remove_student(self, name):
         for student in self.students:
+            # found
             if student.name == name:
                 self.students.remove(student)
                 return "Student removed successfully."
+        # not found
         return "Student not found in the database."
 
 
@@ -40,7 +43,9 @@ student_management.add_student(student3)
 
 result = student_management.search_student("John")
 removed_result = student_management.remove_student("John")
-
 print(removed_result)
 
+print("Remaining students:")
+for student in student_management.students:
+    print(f"Name: {student.name}, Age: {student.age}, Grade: {student.grade}")
 
