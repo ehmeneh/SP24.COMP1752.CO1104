@@ -13,5 +13,6 @@ class Book:
 
 
     def info(self):
-        return f"{self.title}, {self.author}, {self.rating}, {self.count}"
+        return (f"{self.title}, {self.author}, "
+                f"{self.rating}, {self.count}")
 

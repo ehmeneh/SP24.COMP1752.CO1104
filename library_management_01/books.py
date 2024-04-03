@@ -23,7 +23,7 @@ def display_all_books():
         print(f"{key}, title: {book_item.title}, author: {book_item.author}, rating: {book_item.rating}")
 
 
-def get_info_by_code(book_code):
+def get_info(book_code):
     book_object = database[book_code]
     return book_object.info()
 
