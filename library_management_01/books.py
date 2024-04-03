@@ -1,7 +1,7 @@
 from book import Book
 
 # book objects
-book1 = Book(title="The Lean Startup", author="Eric Ries", rating=5)
+book1 = Book("The Lean Startup", "Eric Ries", 5)
 book2 = Book("Thinking, Fast and Slow", "Daniel Kahneman", 4) # position-based mapping
 book3 = Book("Sapiens: A Brief History of Humankind", "Yuval Noah Harari", 3.5)
 book4 = Book("The Alchemist", "Paulo Coelho", 3.7)
@@ -20,10 +20,10 @@ database["B9876"] = book5
 def display_all_books():
     for key in database:
         book_item = database[key]
-        print(f"{key}, title: {book_item.title}, author: {book_item.author}, rating: {book_item.rating}")
+        print(f"{key}, title: {book_item.get_title()}, author: {book_item.author}, rating: {book_item.rating}")
 
 
-def get_info(book_code):
+def get_book_info(book_code):
     book_object = database[book_code]
     return book_object.info()
 
@@ -44,8 +44,8 @@ def get_book_count(book_code):
     pass
 
 
-def set_count(book_name):
+def set_book_count(book_name):
     pass
 
-def get_count(book_name):
+def get_book_count(book_name):
     pass

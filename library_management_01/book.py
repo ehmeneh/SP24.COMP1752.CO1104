@@ -5,7 +5,7 @@ class Book:
     available
     """
     def __init__(self, title, author, rating):
-        self.title = title
+        self.name = title
         self.author = author
         self.rating = rating
         self.count = 0
@@ -16,3 +16,6 @@ class Book:
         return (f"{self.title}, {self.author}, "
                 f"{self.rating}, {self.count}")
 
+
+    def get_title(self):
+        return self.name
